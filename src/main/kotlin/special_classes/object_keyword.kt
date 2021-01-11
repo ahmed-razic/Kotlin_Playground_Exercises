@@ -4,7 +4,7 @@ import java.util.*
 
 class LuckDispatcher {
     fun getNumber() {
-        var objRandom = Random().nextInt(90)
+        val objRandom = Random().nextInt(90)
         println(objRandom)
     }
 }
@@ -19,16 +19,16 @@ fun main() {
     rentPrice(10, 2, 1)
     DoAuth.takeParam("Ahmed", "password")
 
-    val name30: DoAuth = DoAuth
+    val name30 = DoAuth
     println(name30::class.simpleName)
 
     name30.takeParam("name", "pass")
-    name30
+
 
     BigBen.getBongs(7)
 }
 
-fun rentPrice(standardDays: Int, festivityDays: Int, specialDays: Int): Unit {
+fun rentPrice(standardDays: Int, festivityDays: Int, specialDays: Int) {
     val dayRates = object {
         var standard = standardDays * 30
         var festivity = festivityDays * 50

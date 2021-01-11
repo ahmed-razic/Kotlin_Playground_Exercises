@@ -24,8 +24,28 @@ fun main() {
 
     name30.takeParam("name", "pass")
 
-
     BigBen.getBongs(7)
+
+    Car.textRepeat(3)
+}
+
+class Car {
+    companion object {
+        fun textRepeat(number: Int) {
+            println("${"Hello ".repeat(number)}")
+        }
+    }
+
+}
+
+class BigBen {                                  //1
+    companion object Bonger {                   //2
+        fun getBongs(nTimes: Int) {             //3
+            for (i in 1 .. nTimes) {
+                print("BONG ")
+            }
+        }
+    }
 }
 
 fun rentPrice(standardDays: Int, festivityDays: Int, specialDays: Int) {
@@ -49,12 +69,4 @@ object DoAuth {
     }
 }
 
-class BigBen {                                  //1
-    companion object Bonger {                   //2
-        fun getBongs(nTimes: Int) {             //3
-            for (i in 1 .. nTimes) {
-                print("BONG ")
-            }
-        }
-    }
-}
+
